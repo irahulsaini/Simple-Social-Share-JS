@@ -5,13 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Simple Social Share JS - A Social Share Plugin for Website</title>
 		<meta name="description" content="A Simple but efficient social share plugin for website. Easy to Install and Supported in all type of website"/>
-		<link rel="canonical" href="https://irahulsaini.github.io/simple-social-share/"/>
+		<link rel="canonical" href="https://irahulsaini.github.io/simple-social-share-js/"/>
 		<meta property="og:title" content="Simple Social Share JS - A Social Share Plugin for Website"/>
 		<meta property="og:description" content="A Simple but efficient social share plugin for website. Easy to Install and Supported in all type of website"/>
-		<meta property="og:url" content="https://irahulsaini.github.io/simple-social-share/"/>
+		<meta property="og:url" content="https://irahulsaini.github.io/simple-social-share-js/"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<style>
+			.btn:hover,
+			.btn:focus,
+			.btn:active{
+				box-shadow: none!important;
+				outline:0!important;
+			}
 			.display-4 small{
 				font-size:30%;
 				margin-left:.5rem;
@@ -38,6 +44,7 @@
 			<div class="container">
 	  			<h1 class="display-4">Simple Social Share JS<small>v1.2.0</small></h1>
 	  			<p class="lead">A Simple but efficient social share plugin for website. Easy to Install and Supported in all type of website</p>
+				<a class="btn btn-info" href="https://raw.githubusercontent.com/irahulsaini/simple-social-share-js/master/src/simple-social-share.js" target="_blank"><i class="fa fa-download mr-2"></i>Download Simple Social Share JS<br/>(<small>File Size: 2.6KB</small>)</a>
 	  		</div>
 		</div>
 		<div class="container py-2">
@@ -72,7 +79,7 @@
 &lt;button data-share="linkedin">Share on Linkedin&lt;/button&gt;
 &lt;button data-share="pinterest">Share on Pinterest&lt;/button&gt;</pre>
 		</div>
-		<div class="container py-2 d-none">
+		<div class="container py-2">
 			<div class="row">
 				<div class="col-12 col-md-12">
 					<table class="table table-sm">
@@ -117,17 +124,17 @@
 							<tr>
 								<td>Blogger</td>
 								<td><code>data-share="blogger"</code></td>
-								<td>No extra tag/attributes required</td>
+								<td>Create a Post containing page information</td>
 							</tr>
 							<tr>
 								<td>Gmail</td>
 								<td><code>data-share="gmail"</code></td>
-								<td>No extra tag/attributes required</td>
+								<td>Compose a New Email (Login Required)</td>
 							</tr>
 							<tr>
 								<td>Mail</td>
 								<td><code>data-share="mail"</code></td>
-								<td>No extra tag/attributes required</td>
+								<td>User need to configure app into their device to share via mail</td>
 							</tr>
 						</tbody>
 					</table>
