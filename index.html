@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Simple Social Share JS - A Social Share Plugin for Website</title>
+		<meta name="description" content="A Simple but efficient social share plugin for website. Easy to Install and Supported in all type of website"/>
+		<link rel="canonical" href="https://irahulsaini.github.io/simple-social-share/"/>
+		<meta property="og:title" content="Simple Social Share JS - A Social Share Plugin for Website"/>
+		<meta property="og:description" content="A Simple but efficient social share plugin for website. Easy to Install and Supported in all type of website"/>
+		<meta property="og:url" content="https://irahulsaini.github.io/simple-social-share/"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style>
+			.display-4 small{
+				font-size:30%;
+				margin-left:.5rem;
+			}
+			.btn-blogger,.btn-blogger:hover,.btn-blogger:active,.btn-blogger:focus{background-color:#ff5722;color:#fff;box-shadow:none;}
+			.btn-facebook,.btn-facebook:hover,.btn-facebook:active,.btn-facebook:focus{background-color:#3b5998;color:#fff;box-shadow:none;}
+			.btn-twitter,.btn-twitter:hover,.btn-twitter:active,.btn-twitter:focus{background-color:#1da1f2;color:#fff;box-shadow:none;}
+			.btn-pinterest,.btn-pinterest:hover,.btn-pinterest:active,.btn-pinterest:focus{background-color:#e60023;color:#fff;box-shadow:none;}
+			.btn-linkedin,.btn-linkedin:hover,.btn-linkedin:active,.btn-linkedin:focus{background-color:#0073b0;color:#fff;box-shadow:none;}
+			.btn-whatsapp,.btn-whatsapp:hover,.btn-whatsapp:active,.btn-whatsapp:focus{background-color:#1ebda4;color:#fff;box-shadow:none;}
+			.btn-telegram,.btn-telegram:hover,.btn-telegram:active,.btn-telegram:focus{background-color:#35ade1;color:#fff;box-shadow:none;}
+			.btn-gmail,.btn-gmail:hover,.btn-gmail:active,.btn-gmail:focus{background-color:#c23829;color:#fff;box-shadow:none;}
+
+			
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-info shadow-sm">
+			<div class="container">
+				<a class="navbar-brand" href="#">Simple Social Share JS</a>
+			</div>
+		</nav>
+		<div class="jumbotron">
+			<div class="container">
+	  			<h1 class="display-4">Simple Social Share JS<small>v1.2.0</small></h1>
+	  			<p class="lead">A Simple but efficient social share plugin for website. Easy to Install and Supported in all type of website</p>
+	  		</div>
+		</div>
+		<div class="container py-2">
+			<p class="lead text-center">Click any button below to Share this Page on Social Networks</p>
+			<div class="text-center">
+				<button type="button" class="btn btn-blogger btn-sm mb-2 mr-2" data-share="blogger" data-toggle="tooltip" title="Publish on Blogger"><img class="mr-2" style="height:.65rem;" src="./images/icons/50x50/blogger-white.png"/>Blogger</button>
+				<button type="button" class="btn btn-facebook btn-sm mb-2 mr-2" data-share="facebook" data-toggle="tooltip" title="Share on Facebook"><i class="fa fa-facebook mr-2"></i>Facebook</button>
+				<button type="button" class="btn btn-twitter btn-sm mb-2 mr-2" data-share="twitter" data-toggle="tooltip" title="Share on Twitter"><i class="fa fa-twitter mr-2"></i>Twitter</button>
+				<button type="button" class="btn btn-pinterest btn-sm mb-2 mr-2" data-share="pinterest" data-toggle="tooltip" title="Share on Pinterest"><i class="fa fa-pinterest mr-2"></i>Pinterest</button>
+				<button type="button" class="btn btn-linkedin btn-sm mb-2 mr-2" data-share="linkedin" data-toggle="tooltip" title="Share on Linkedin"><i class="fa fa-linkedin mr-2"></i>Linkedin</button>
+				<button type="button" class="btn btn-whatsapp btn-sm mb-2 mr-2" data-share="whatsapp" data-toggle="tooltip" title="Share on Whatsapp"><i class="fa fa-whatsapp mr-2"></i>Whatsapp</button>
+				<button type="button" class="btn btn-telegram btn-sm mb-2 mr-2" data-share="telegram" data-toggle="tooltip" title="Share on Telegram"><i class="fa fa-telegram mr-2"></i>Telegram</button>
+				<button type="button" class="btn btn-gmail btn-sm mb-2 mr-2" data-share="gmail" data-toggle="tooltip" title="Share via Gmail"><img class="mr-2" style="width:.87rem;height: auto;margin-top:-0.2rem;" src="./images/icons/50x50/gmail.png"/>Gmail</button>
+				<button type="button" class="btn btn-dark btn-sm mb-2 mr-2" data-share="mail" data-toggle="tooltip" title="Share via Email"><i class="fa fa-envelope-o mr-2"></i>Mail</button>
+			</div>
+		</div>
+		<div class="container py-2">
+			<h4>Installation:</h4>
+			<p>Put these two codes before &lt;/body&gt;<br/>Please note: if you have installed jQuery then no need to include jQuery again</p>
+			<pre class="code bg-light p-2 small">&lt;!-- jQuery or jQuery Slim Library Required --&gt;
+&lt;script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous" type="text/javascript" &gt;&lt;/script&gt;
+
+&lt;!-- Social Share JS --&gt;
+&lt;script src="./path/to/socialshare.js" type="text/javascript" &gt;&lt;/script&gt;</pre>
+			<p>You can also integrate social share js source code into your site's main javascript file to avoid network request.</p>
+		</div>
+		<div class="container py-2">
+			<h4>Examples:</h4>
+			<p>Simple Social Share Plugin is very simple and easy to integrate. It doesn't harm your any design or development. To enable sharing you'll need to simply add <code>data-share</code> attribute to element. Add <code>data-share="network_name"</code> into your button or link and it will automatically integrate social share system</p>
+			<pre class="code bg-dark p-2 text-white">&lt;button data-share="facebook">Share on Facebook&lt;/button&gt;
+&lt;button data-share="twitter">Share on Twitter&lt;/button&gt;
+&lt;button data-share="linkedin">Share on Linkedin&lt;/button&gt;
+&lt;button data-share="pinterest">Share on Pinterest&lt;/button&gt;</pre>
+		</div>
+		<div class="container py-2 d-none">
+			<div class="row">
+				<div class="col-12 col-md-12">
+					<table class="table table-sm">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Code</th>
+								<th>Details</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Facebook</td>
+								<td><code>data-share="facebook"</code></td>
+								<td>No extra tag/attributes required</td>
+							</tr>
+							<tr>
+								<td>Twitter</td>
+								<td><code>data-share="twitter"</code></td>
+								<td>No extra tag/attributes required</td>
+							</tr>
+							<tr>
+								<td>Pinterest</td>
+								<td><code>data-share="pinterest"</code></td>
+								<td>It require <code>og:image</code> tag or <code>data-image</code> to share image on pinterest</td>
+							</tr>
+							<tr>
+								<td>Linkedin</td>
+								<td><code>data-share="linkedin"</code></td>
+								<td>No extra tag/attributes required</td>
+							</tr>
+							<tr>
+								<td>Whatsapp</td>
+								<td><code>data-share="whatsapp"</code></td>
+								<td>No extra tag/attributes required</td>
+							</tr>
+							<tr>
+								<td>Telegram</td>
+								<td><code>data-share="telegram"</code></td>
+								<td>No extra tag/attributes required</td>
+							</tr>
+							<tr>
+								<td>Blogger</td>
+								<td><code>data-share="blogger"</code></td>
+								<td>No extra tag/attributes required</td>
+							</tr>
+							<tr>
+								<td>Gmail</td>
+								<td><code>data-share="gmail"</code></td>
+								<td>No extra tag/attributes required</td>
+							</tr>
+							<tr>
+								<td>Mail</td>
+								<td><code>data-share="mail"</code></td>
+								<td>No extra tag/attributes required</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="container py-2 d-none">
+			<h4 class="text-center">Supported Social Networks</h4>
+			<div class="row mx-0 justify-content-center">
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Facebook" alt="" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Twitter" alt="Twitter" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Pinterest" alt="Pinterest" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Linkedin" alt="Linkedin" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Whatsapp" alt="Whatsapp" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Telegram" alt="Telegram" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Blogger" alt="Blogger" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Email" alt="Email" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+				<div class="col-4 col-md-3 col-lg-2 col-xl-1 p-1 text-center">
+					<img title="Gmail" alt="Gmail" src="//placehold.it/100x40" class="w-100" data-toggle="tooltip"/>
+				</div>
+			</div>
+		</div>
+		<section class="container py-2">
+			<h5>Links</h5>
+			<ul class="list-inline">
+				<li><a class="text-dark" href="https://github.com/irahulsaini/simple-social-share-js/"><i class="fa fa-angle-right mr-2"></i>Source Code</a></li>
+				<li><a class="text-dark" href="https://github.com/irahulsaini/simple-social-share-js/wiki"><i class="fa fa-angle-right mr-2"></i>Documents</a></li>
+				<li><a class="text-dark" href="https://github.com/irahulsaini/simple-social-share-js/issues"><i class="fa fa-angle-right mr-2"></i>Issues</a></li>
+			</ul>
+		</section>
+		<footer class="bg-dark text-white py-4 small">
+			<div class="container text-center">
+				Developed by <a class="text-white" href="https://www.irahulsaini.com">Rahul Saini</a>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!-- <script src="./src/socialshare.js"></script> -->
+		<script src="./dist/socialshare.js"></script>
+		<script>
+			$('[data-toggle="tooltip"]').tooltip();
+		</script>
+	</body>
+</html>
